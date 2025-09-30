@@ -63,8 +63,8 @@ graph TD
     F --> G(Avaliacao_AUC_Sensibilidade);
     G --> H[Selecao_do_Melhor_Modelo];
     H --> I(Deploy_Simulacao_Previsao);
-    ```
-    ### 🚀 **Funcionalidades e Demonstração**
+```
+### 🚀 **Funcionalidades e Demonstração**
 
 #### **Principais Funcionalidades**
 1.  **Limpeza e Imputação:** Tratamento de valores ausentes (`imc` preenchido com a mediana).
