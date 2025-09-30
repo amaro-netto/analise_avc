@@ -24,8 +24,6 @@ Este conjunto de dados é usado para prever a probabilidade de um paciente sofre
 
 ## Load data and install packages
 
-## Load data and install packages
-
 ```{r}
 # -----------------------------------------------------
 # SETUP: Instalação e Carregamento de Pacotes
@@ -56,8 +54,6 @@ caminho_dados <- "../data/healthcare-dataset-stroke-data.csv"
 dados_avc <- read_csv(caminho_dados)
 ```
 
-
-## Describe and explore the data
 
 ## Describe and explore the data
 
