@@ -1,4 +1,4 @@
-# 🩺 PREVISÃO DE ACIDENTE VASCULAR CEREBRAL (AVC)
+# PREVISÃO DE ACIDENTE VASCULAR CEREBRAL (AVC)
 
 ![Python: 3.9+](https://img.shields.io/badge/Python-3.9+-3776AB?labelColor=171717&style=for-the-badge&logo=python&logoColor=white)
 ![Jupyter Notebook](https://img.shields.io/badge/Jupyter-F37626?labelColor=171717&style=for-the-badge&logo=jupyter&logoColor=white)
@@ -8,24 +8,23 @@
 
 ---
 
-### **Índice**
-- [**Índice**](#índice)
-- [📝 **Descrição do Projeto**](#-descrição-do-projeto)
-- [⚙️ **Tecnologias Utilizadas**](#️-tecnologias-utilizadas)
-- [📁 **Estrutura do Projeto**](#-estrutura-do-projeto)
-- [\*\* Fluxo de Funcionamento\*\*](#-fluxo-de-funcionamento)
-- [**Principais Funcionalidades**](#principais-funcionalidades)
-- [**Como funciona**](#como-funciona)
-- [👥 **Equipe do Projeto**](#-equipe-do-projeto)
-- [✅ **Conclusão e Insights**](#-conclusão-e-insights)
+### Índice
+- [📝 Descrição do Projeto](#-descrição-do-projeto)
+- [⚙️ Tecnologias Utilizadas](#️-tecnologias-utilizadas)
+- [📁 Estrutura do Projeto](#-estrutura-do-projeto)
+- [\\Fluxo de Funcionamento\\](#-fluxo-de-funcionamento)
+- [Principais Funcionalidades](#principais-funcionalidades)
+- [Como funciona](#como-funciona)
+- [👥 Equipe do Projeto](#-equipe-do-projeto)
+- [✅ Conclusão e Insights](#-conclusão-e-insights)
 
 ---
 
-### 📝 **Descrição do Projeto**
+### 📝 Descrição do Projeto
 
 Este projeto de **Machine Learning** tem como objetivo construir e implementar um modelo de classificação capaz de prever a probabilidade de um paciente sofrer um Acidente Vascular Cerebral (AVC). O modelo foi desenvolvido para auxiliar organizações de saúde na identificação proativa de pacientes de alto risco, permitindo intervenções clínicas e preventivas precoces. O foco foi em construir um modelo clinicamente validado, com ênfase nas métricas de **Sensibilidade (Recall)** e **AUC**.
 
-#### ⚙️ **Tecnologias Utilizadas**
+#### ⚙️ Tecnologias Utilizadas
 
 * **Linguagem:** Python
 * **Ambiente:** Jupyter Notebook
@@ -37,7 +36,7 @@ Este projeto de **Machine Learning** tem como objetivo construir e implementar u
     * **Imbalanced-learn:** Implementação da técnica SMOTE para balanceamento de classes.
     * **Matplotlib/Seaborn:** Análise Exploratória de Dados (EDA).
 
-#### 📁 **Estrutura do Projeto**
+#### 📁 Estrutura do Projeto
 ```
 analise_avc/
 ├── data/
@@ -49,7 +48,7 @@ analise_avc/
 │   └── stroke_prediction.ipynb             # Notebook principal com a análise
 └── requirements.txt                        # Lista de dependências do ambiente virtual
 ```
-#### ** Fluxo de Funcionamento**
+#### Fluxo de Funcionamento
 ```mermaid
 graph TD
     A[Carregar_Dados_CSV] --> B{Limpeza_e_Imputacao};
@@ -61,7 +60,7 @@ graph TD
     G --> H[Selecao_do_Melhor_Modelo];
     H --> I(Deploy_Simulacao_Previsao);
 ```
-### 🚀 **Funcionalidades e Demonstração**
+### 🚀 Funcionalidades e Demonstração
 
 #### **Principais Funcionalidades**
 1.  **Limpeza e Imputação:** Tratamento de valores ausentes (`imc` preenchido com a mediana).
@@ -80,12 +79,12 @@ A simulação de previsão demonstrou a capacidade de classificação do modelo:
 
 ---
 
-### 👥 **Equipe do Projeto**
+### 👥 Equipe do Projeto
 <a href="https://github.com/amaro-netto" title="Amaro Netto"><img width="180" src="https://github.com/user-attachments/assets/b7a3a1bf-304a-4974-b75f-1d620ad6ecf1"/></a>
 
 ---
 
-### ✅ **Conclusão e Insights**
+### ✅ Conclusão e Insights
 
 1.  **Fatores Determinantes:** A análise de **Feature Importance** confirmou que a **Idade**, o **Nível de Glicose Médio** e a presença de **Doença Cardíaca** são os fatores de risco mais críticos para a previsão de AVC.
 2.  **Capacidade Preditiva:** O modelo atingiu os objetivos de validação, provendo uma ferramenta valiosa para profissionais de saúde na tomada de decisões clínicas.
