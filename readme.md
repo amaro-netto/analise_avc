@@ -74,11 +74,11 @@ graph TD
 5.  **Implementação Pronta:** Salvamento do modelo e do pré-processador via `joblib` para deploy imediato.
 
 #### **Como funciona**
-A análise demonstrou que o modelo **[NOME DO MELHOR MODELO: EX: XGBoost]** alcançou a melhor performance, com um **AUC de [VALOR DO AUC AQUI]%** e uma **Sensibilidade (Recall) de [VALOR DA SENSIBILIDADE AQUI]%** no conjunto de teste.
+A análise demonstrou que o modelo **Logistic Regression** alcançou a melhor performance, com um **AUC de 0.8380** e uma **Sensibilidade (Recall) de 0.5051%** no conjunto de teste.
 
 A simulação de previsão demonstrou a capacidade de classificação do modelo:
 > **Caso de Alto Risco (Idade: 68, Glicose: 220, Doença Cardíaca: Sim)**
-> Probabilidade de AVC: **[VALOR DA PROBABILIDADE AQUI]%**
+> Probabilidade de AVC: **89.60%**
 > *Recomendação: ALTO RISCO! Intervenção clínica imediata é necessária.*
 
 ---
@@ -121,9 +121,3 @@ A simulação de previsão demonstrou a capacidade de classificação do modelo:
 1.  **Fatores Determinantes:** A análise de **Feature Importance** confirmou que a **Idade**, o **Nível de Glicose Médio** e a presença de **Doença Cardíaca** são os fatores de risco mais críticos para a previsão de AVC.
 2.  **Capacidade Preditiva:** O modelo atingiu os objetivos de validação, provendo uma ferramenta valiosa para profissionais de saúde na tomada de decisões clínicas.
 3.  **Recomendação:** Recomenda-se que a organização utilize este modelo para priorizar o acompanhamento e a intervenção preventiva em pacientes com esses fatores de risco elevados.
-
----
-
-### 📸 **Prévia do Projeto**
-[Insira aqui a imagem da sua Tabela de Métricas (AUC/Sensibilidade)]
-[Insira aqui a imagem do seu Gráfico de Importância de Features]
