@@ -9,18 +9,15 @@
 ---
 
 ### **Índice**
-- [🩺 PREVISÃO DE ACIDENTE VASCULAR CEREBRAL (AVC)](#-previsão-de-acidente-vascular-cerebral-avc)
-    - [**Índice**](#índice)
-    - [📝 **Descrição do Projeto**](#-descrição-do-projeto)
-      - [⚙️ **Tecnologias Utilizadas**](#️-tecnologias-utilizadas)
-      - [📁 **Estrutura do Projeto**](#-estrutura-do-projeto)
-      - [\*\* Fluxo de Funcionamento\*\*](#-fluxo-de-funcionamento)
-      - [**Principais Funcionalidades**](#principais-funcionalidades)
-      - [**Como funciona**](#como-funciona)
-    - [💻 **Como Usar a Aplicação**](#-como-usar-a-aplicação)
-    - [👥 **Equipe do Projeto**](#-equipe-do-projeto)
-    - [✅ **Conclusão e Insights**](#-conclusão-e-insights)
-    - [📸 **Prévia do Projeto**](#-prévia-do-projeto)
+- [**Índice**](#índice)
+- [📝 **Descrição do Projeto**](#-descrição-do-projeto)
+- [⚙️ **Tecnologias Utilizadas**](#️-tecnologias-utilizadas)
+- [📁 **Estrutura do Projeto**](#-estrutura-do-projeto)
+- [\*\* Fluxo de Funcionamento\*\*](#-fluxo-de-funcionamento)
+- [**Principais Funcionalidades**](#principais-funcionalidades)
+- [**Como funciona**](#como-funciona)
+- [👥 **Equipe do Projeto**](#-equipe-do-projeto)
+- [✅ **Conclusão e Insights**](#-conclusão-e-insights)
 
 ---
 
@@ -80,34 +77,6 @@ A simulação de previsão demonstrou a capacidade de classificação do modelo:
 > **Caso de Alto Risco (Idade: 68, Glicose: 220, Doença Cardíaca: Sim)**
 > Probabilidade de AVC: **89.60%**
 > *Recomendação: ALTO RISCO! Intervenção clínica imediata é necessária.*
-
----
-
-### 💻 **Como Usar a Aplicação**
-
-1.  **Clonar o Repositório:**
-    ```bash
-    git clone [LINK DO SEU REPOSITÓRIO AQUI]
-    cd analise_avc
-    ```
-2.  **Configurar o Ambiente Virtual:**
-    ```bash
-    python -m venv .venv
-    # Windows: .venv\Scripts\activate
-    # Linux/Mac: source .venv/bin/activate
-    ```
-3.  **Instalar Dependências:**
-    ```bash
-    pip install -r requirements.txt
-    ```
-4.  **Executar a Análise:** Abra o arquivo `scripts/stroke_prediction.ipynb` no Jupyter Notebook ou VS Code e execute todas as células para reproduzir a análise e o treinamento.
-5.  **Carregar o Modelo:** O modelo final e o `preprocessor` podem ser carregados no Python para fazer novas previsões:
-    ```python
-    import joblib
-    model = joblib.load('output/[nome_do_arquivo].joblib')
-    preprocessor = joblib.load('output/preprocessor.joblib')
-    # Use o 'model' e 'preprocessor' em sua aplicação.
-    ```
 
 ---
 
