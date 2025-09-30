@@ -1,0 +1,9 @@
+graph TD
+    A[Carregar_Dados_CSV] --> B{Limpeza_e_Imputacao};
+    B --> C[Analise_Exploratoria_EDA];
+    C --> D{Particionamento_Treino_Teste};
+    D --> E[Balanceamento_SMOTE];
+    E --> F(Treinamento_de_Modelos);
+    F --> G(Avaliacao_AUC_Sensibilidade);
+    G --> H[Selecao_do_Melhor_Modelo];
+    H --> I(Deploy_Simulacao_Previsao);
