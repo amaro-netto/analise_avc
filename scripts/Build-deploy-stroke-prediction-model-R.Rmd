@@ -47,11 +47,13 @@ library(ggplot2)
 # CARREGAMENTO DO DATASET
 # -----------------------------------------------------
 
-# Define o caminho do arquivo (o R volta uma pasta e entra em 'data').
-caminho_dados <- "../data/healthcare-dataset-stroke-data.csv" 
+# Define o caminho do arquivo (CORREÇÃO: Removido o '../' pois a pasta 'data'
+# está DENTRO do Working Directory 'B:/Projetos/analise_avc').
+caminho_dados <- "data/healthcare-dataset-stroke-data.csv" 
 
 # Carrega os dados.
 dados_avc <- read_csv(caminho_dados)
+
 ```
 
 
@@ -88,8 +90,31 @@ print(valores_ausentes)
 
 # Task Two: Build prediction models
 
-```{r}
+```{r data_partitioning}
+# Define o percentual de dados para treinamento
+percentual_treino <- 0.80
 
+# Cria um índice (lista de linhas) para a partição.
+# list=FALSE garante que seja um vetor simples de índices.
+# p=percentual_treino define 80% dos dados para treino.
+# times=1 indica que queremos apenas uma divisão.
+# O 'dados_avc_limpo$stroke' garante a amostragem ESTRATIFICADA (mantém a proporção de AVC).
+set.seed(42) # Usamos o 'set.seed' para que seus resultados sejam sempre os mesmos que os meus.
+indices_treino <- createDataPartition(
+  y = dados_avc_limpo$stroke, 
+  p = percentual_treino, 
+  list = FALSE
+)
+
+# Cria os conjuntos de dados de Treino (80%) e Teste (20%)
+dados_treino <- dados_avc_limpo[indices_treino, ]
+dados_teste <- dados_avc_limpo[-indices_treino, ]
+
+print("Dimensões do Conjunto de Treino:")
+dim(dados_treino)
+
+print("Dimensões do Conjunto de Teste:")
+dim(dados_teste)
 ```
 
 
