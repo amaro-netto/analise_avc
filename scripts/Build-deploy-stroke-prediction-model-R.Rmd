@@ -1,0 +1,151 @@
+---
+title: "Projeto de Previsão de Acidente Vascular Cerebral (AVC)"
+author: "Amaro Netto"
+date: "`r Sys.Date()`"
+output:
+    html_document:
+        toc: true
+        toc_depth: 3
+        theme: readable
+---
+
+# 1. Introdução
+
+Este arquivo RMarkdown contém o relatório da análise de dados realizada para o projeto de construção e implantação de um modelo de previsão de AVC em R. Ele contém análises como exploração de dados, estatísticas resumidas e construção dos modelos de previsão. O relatório final foi concluído em `r date()`.
+
+**Data Description:**
+
+Segundo a Organização Mundial da Saúde (OMS), o AVC é a segunda principal causa de morte no mundo, sendo responsável por aproximadamente 11% do total de mortes.
+
+Este conjunto de dados é usado para prever a probabilidade de um paciente sofrer um AVC com base em parâmetros de entrada como sexo, idade, diversas doenças e tabagismo. Cada linha dos dados fornece informações relevantes sobre o paciente.
+
+
+# Task One: Import data and data preprocessing
+
+## Load data and install packages
+
+## Load data and install packages
+
+```{r}
+# -----------------------------------------------------
+# SETUP: Instalação e Carregamento de Pacotes
+# -----------------------------------------------------
+
+# Lista dos pacotes essenciais para manipulação, modelagem e visualização.
+pacotes_necessarios <- c("tidyverse", "caret", "tidyr", "mice", "ggplot2")
+
+# Verifica se os pacotes estão instalados. Se não estiverem, ele os instala.
+novos_pacotes <- pacotes_necessarios[!(pacotes_necessarios %in% installed.packages()[,"Package"])]
+if(length(novos_pacotes)) install.packages(novos_pacotes)
+
+# Carrega os pacotes na memória.
+library(tidyverse)
+library(caret)    
+library(tidyr)    
+library(mice)     
+library(ggplot2)
+
+# -----------------------------------------------------
+# CARREGAMENTO DO DATASET
+# -----------------------------------------------------
+
+# Define o caminho do arquivo (o R volta uma pasta e entra em 'data').
+caminho_dados <- "../data/healthcare-dataset-stroke-data.csv" 
+
+# Carrega os dados.
+dados_avc <- read_csv(caminho_dados)
+```
+
+
+## Describe and explore the data
+
+## Describe and explore the data
+
+```{r}
+# --- EXPLORAÇÃO INICIAL ---
+
+# 1. Dimensões do Dataset: Quantas linhas e colunas temos?
+print("Dimensões do Dataset (Linhas x Colunas):")
+dim(dados_avc) 
+
+# 2. Tipos de Variáveis: Verificação da estrutura para planejar a limpeza.
+print("Estrutura (Tipos de Variáveis):")
+str(dados_avc)
+
+# --- VERIFICAÇÃO DE VALORES AUSENTES (NA) ---
+
+# Usa o tidyverse (dplyr) para contar quantos valores 'NA' (faltando) existem em cada coluna.
+valores_ausentes <- dados_avc %>% 
+  summarise_all(~sum(is.na(.))) %>%
+  # Transforma a tabela para mostrar apenas as colunas com NA
+  pivot_longer(everything(), names_to = "Variavel", values_to = "NA_Count") %>%
+  filter(NA_Count > 0)
+
+# Imprime o resultado: Se houver NAs, será listado aqui.
+print("Valores Ausentes por Coluna:")
+print(valores_ausentes)
+
+# Confirmação: Sabemos que a coluna 'bmi' tem NAs, vamos tratá-los.
+```
+
+
+
+# Task Two: Build prediction models
+
+```{r}
+
+```
+
+
+
+
+# Task Three: Evaluate and select prediction models
+
+```{r}
+
+```
+
+
+
+# Task Four: Deploy the prediction model
+
+```{r}
+
+```
+
+
+
+
+# Task Five: Findings and Conclusions
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
